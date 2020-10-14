@@ -1,0 +1,25 @@
+def main():
+    a = list(map(int, input().strip().split()))
+    for i in a:
+        print(sum_cifr(i))
+    print(max(a))
+    print(a[-3])
+
+
+def sum_cifr(num):
+    result = 0
+    while num:
+        result += num % 10
+        num //= 10
+    return result
+
+
+# передача параметров
+def ex1(a=199, b=40):
+    print(a + b)
+
+
+# произвольное кол-во параметров
+def ex2(*args):
+    for i in range(len(args)):
+        print(f"Parameter#{i}: {args[i]}")
